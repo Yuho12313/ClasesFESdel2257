@@ -23,12 +23,19 @@ public class ComputadoraGamer {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-    }
         Computadora pc = new Computadora();
-        CPU CPU = new CPU();
-        Mouse Mouse = new Mouse("Logitech", "G203", "Gaming Mouse");
-        Pantalla[] tmppantalla = new Pantalla[3];
-        Teclado Teclado = new Teclado("Apple", "X2341", 1, 105);
+        pc.setCPU(new CPU("Intel", "Core i3", 6));
+        pc.setMouse(new Mouse("Logitech", "G203", "Gaming Mouse"));
+        pc.setTeclado(new Teclado("Apple", "X2341", 1, 105));
+        Pantalla [] tmppantalla = new Pantalla [2];
+        tmppantalla [0] = new Pantalla("Samsung", "G3445", 8);
+        tmppantalla [1] = new Pantalla("Apple", "X32", 9);
+        
+        pc.setPantalla(tmppantalla);
+        
+        System.out.println(pc);
+    }
+        
         
         
         
